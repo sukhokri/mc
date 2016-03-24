@@ -712,6 +712,7 @@ find_parameters (char **start_dir, ssize_t * start_dir_len,
     /* Continue 1st column */
     recursively_cbox = check_new (y1++, x1, options.find_recurs, file_recurs_label);
     add_widget (find_dlg, recursively_cbox);
+FIND_Y = y2 - y1;
     cbox_position = FIND_Y - 5;
 
     only_directories_cbox = check_new (cbox_position--, 3, options.only_directories, file_only_directories_label);
