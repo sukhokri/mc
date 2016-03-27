@@ -273,6 +273,7 @@ create_command_menu (void)
      */
     GList *entries = NULL;
 
+    entries = g_list_prepend (entries, menu_entry_create (_("&Test"), CK_Test));
     entries = g_list_prepend (entries, menu_entry_create (_("&User menu"), CK_UserMenu));
     entries = g_list_prepend (entries, menu_entry_create (_("&Directory tree"), CK_Tree));
     entries = g_list_prepend (entries, menu_entry_create (_("&Find file"), CK_Find));
@@ -1372,6 +1373,11 @@ midnight_execute_cmd (Widget * sender, long command)
         undelete_cmd ();
         break;
 #endif
+    case CK_Test:
+	query_dialog (_("Test"),
+                           _("Kristina Sukhomlina"),
+                           D_NORMAL, 2, _("&Yes"), _("&No"));
+	break;
     case CK_UserMenu:
         user_file_menu_cmd ();
         break;

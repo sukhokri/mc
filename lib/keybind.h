@@ -71,6 +71,7 @@ enum
     CK_Clear,
     CK_Menu,
     CK_MenuLastSelected,
+    CK_Test,
     CK_UserMenu,
     CK_EditUserMenu,
     CK_Search,
